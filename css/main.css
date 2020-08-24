@@ -180,7 +180,6 @@ img {
 }
 
 footer {
-  /* text-align: var(--center); */
   margin-top: 50px;
   padding: 1.1rem;
   font-size: 1.3rem;
@@ -255,7 +254,6 @@ footer {
   .welcomeMsj {
     width: 70%;
     text-align: left;
-    /* background: saddlebrown; */
   }
 
   .welcome {
