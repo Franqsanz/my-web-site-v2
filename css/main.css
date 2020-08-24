@@ -58,7 +58,14 @@ a:hover {
 
 .aSources {
   margin: 7px;
-  font-size: 1.4rem;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--gold);
+  box-shadow: 3px 3px 0 var(--gold);
+}
+
+.aSources:hover {
+  box-shadow: inset 3px 3px 0 var(--gold);
 }
 
 .logo {
@@ -205,12 +212,12 @@ footer {
 
 @media only screen and (max-width: 768px) {
   header {
-    padding: 0.7rem 0 2.5rem 0;
+    padding: 0.8rem 0 2.8rem 0;
     flex-direction: column;
   }
 
   ul {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .contentWelcome {
@@ -233,30 +240,40 @@ footer {
 }
 
 @media only screen and (max-width: 425px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    padding: 0;
+    font-size: 2.19rem;
+  }
+
   main {
     padding: 0;
   }
 
   .contentWelcome {
-    margin-top: 10px;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
+    margin-top: 30px;
+    padding: 2.5rem 0 2.5rem 0;
   }
 
   .welcomeMsj {
-    width: 70%;
+    width: 80%;
     text-align: left;
   }
 
   .welcome {
-    font-size: 2.7rem;
-    line-height: 1.33;
+    font-size: 2.9rem;
+    line-height: 1.22;
   }
 
   h1 {
     font-size: 1.6rem;
+  }
+
+  .aSources {
+    font-size: 1rem;
   }
 
   footer {
