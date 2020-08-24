@@ -182,13 +182,13 @@ img {
 footer {
   /* text-align: var(--center); */
   margin-top: 50px;
-  padding: 1.3rem;
+  padding: 1.1rem;
   font-size: 1.3rem;
   background: var(--whiteSmoke2);
 }
 
 .network {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin: 5px;
 }
 
@@ -206,8 +206,12 @@ footer {
 
 @media only screen and (max-width: 768px) {
   header {
-    height: 100px;
+    padding: 0 0 3rem 0;
     flex-direction: column;
+  }
+
+  ul {
+    justify-content: center;
   }
 
   .contentWelcome {
@@ -229,6 +233,10 @@ footer {
   .me {
     width: 90%;
   }
+
+  .network {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -237,11 +245,11 @@ footer {
   }
 
   .contentWelcome {
-    margin-top: 70px;
+    margin-top: 10px;
   }
 
   nav ul li a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .welcomeMsj {
@@ -251,7 +259,8 @@ footer {
   }
 
   .welcome {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+    line-height: 1.4;
   }
 
   h1 {
