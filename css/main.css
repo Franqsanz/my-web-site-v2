@@ -1,5 +1,6 @@
 :root {
   --gold: #ffc700;
+  --dark: #111111;
   --dark-gray: #2a2a2a;
   --whiteSmoke: whitesmoke;
   --whiteSmoke2: #dbdbdb;
@@ -20,6 +21,11 @@ body {
   scroll-behavior: smooth;
   color: var(--dark-gray);
 }
+
+/* body.dark {
+  background: var(--dark);
+  color: #e6e6e6;
+} */
 
 ::selection {
   color: var(--gold);
