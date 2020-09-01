@@ -2,6 +2,6 @@
 
 ![hello](./img/hello.png)
 
-**Deploy on Netlify.** 🚀
+**Desplegado en Netlify.** 🚀
 
 [Ver Sitio](https://franqsanz.netlify.app/)
