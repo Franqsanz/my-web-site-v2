@@ -6,12 +6,16 @@ window.addEventListener('load', () => {
     font-size: 1.4rem;
   `);
 
-  // const body = document.querySelector('body');
-  // const span = document.querySelector('span');
-  // const btnDark = document.querySelector('button');
+  // Modo Oscuro
+  const checkbox = document.querySelector('input[type="checkbox"]')
 
-  // btnDark.addEventListener('click', () => {
-  //   body.classList.toggle('dark');
-  //   span.classList.toggle('dark');
-  // });
+  function switchTheme(e) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  }
+
+  checkbox.addEventListener('change', switchTheme, false);
 });

@@ -1,9 +1,9 @@
 :root {
   --gold: #ffc700;
   --dark: #111111;
-  --dark-gray: #2a2a2a;
-  --whiteSmoke: whitesmoke;
-  --whiteSmoke2: #dbdbdb;
+  --color-fonts: #2a2a2a;
+  --background-body: whitesmoke;
+  --footer-background: #dbdbdb;
   --gray: #999999;
   --zero: 0;
   --italic: italic;
@@ -13,30 +13,32 @@
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+[data-theme='dark'] {
+  --background-body: #1d1d1d;
+  --footer-background: #1d1d1d;
+  --color-fonts: #eeeeee;
+}
+
 html,
 body {
   margin: var(--zero);
   font-family: var(--apple);
-  background: var(--whiteSmoke);
+  background: var(--background-body);
   scroll-behavior: smooth;
   color: var(--dark-gray);
+  transition: 0.3s;
 }
-
-/* body.dark {
-  background: var(--dark);
-  color: #e6e6e6;
-} */
 
 ::selection {
   color: var(--gold);
-  background: var(--dark-gray);
+  background: var(--color-fonts);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 0.3rem 0.7rem 0.3rem 0.7rem;
-  height: 50px;
+  height: 60px;
   border-bottom: 1px solid var(--gold);
 }
 
@@ -47,31 +49,53 @@ ul {
 li {
   list-style: none;
   margin: 0 20px 0 0;
+  align-self: center;
+  font-weight: var(--bold);
+  color: var(--color-fonts);
 }
 
-a,
-.aSources {
-  color: var(--dark-gray);
+#ceckbox {
+  display: none;
+}
+
+.aLink {
+  color: var(--color-fonts);
   text-decoration: none;
   font-size: 1.4rem;
-  font-weight: var(--bold);
 }
 
-a:hover {
+.aLink:hover {
   color: var(--gold);
   border-bottom: 2px solid var(--gold);
 }
 
-.aSources {
+.aSources,
+label {
+  color: var(--color-fonts);
   margin: 7px;
+  text-decoration: none;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid var(--gold);
   box-shadow: 3px 3px 0 var(--gold);
+  font-weight: var(--bold);
 }
 
 .aSources:hover {
   box-shadow: inset 3px 3px 0 var(--gold);
+}
+
+label {
+  box-shadow: 2px 2px 0 var(--gold);
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+label:active {
+  box-shadow: inset 2px 2px 0 var(--gold);
 }
 
 .logo {
@@ -79,7 +103,7 @@ a:hover {
   padding: 0 0 0 1rem;
   font-weight: var(--bold);
   font-style: var(--italic);
-  color: var(--dark-gray);
+  color: var(--color-fonts);
   align-self: var(--center);
 }
 
@@ -127,7 +151,7 @@ main {
 
 h1 {
   font-style: var(--italic);
-  color: var(--dark-gray);
+  color: var(--color-fonts);
   text-decoration: underline var(--gold);
   font-size: 1.9rem;
   margin-top: 4rem;
@@ -135,7 +159,7 @@ h1 {
 }
 
 h2 {
-  color: var(--dark-gray);
+  color: var(--color-fonts);
   font-size: 1.5rem;
   padding: 0 1rem 0 1rem;
 }
@@ -157,6 +181,7 @@ p {
   padding: 0.5rem 1rem;
   margin: 0;
   line-height: 1.77;
+  color: var(--color-fonts);
 }
 
 .contentBtns {
@@ -188,7 +213,7 @@ p {
 }
 
 img {
-  border: 1px solid var(--whiteSmoke);
+  border: 1px solid var(--background-body);
   box-shadow: 6px 6px 0 var(--gold);
 }
 
@@ -196,11 +221,14 @@ footer {
   margin-top: 50px;
   padding: 1.1rem;
   font-size: 1.3rem;
-  background: var(--whiteSmoke2);
+  background: var(--footer-background);
 }
 
 .network {
   font-size: 1.1rem;
+  color: var(--color-fonts);
+  font-weight: var(--bold);
+  text-decoration: none;
   margin: 5px;
 }
 
@@ -250,7 +278,16 @@ footer {
 }
 
 @media only screen and (max-width: 425px) {
-  nav ul li a {
+  ul {
+    padding-inline-start: 0;
+  }
+
+  li {
+    margin: 5px;
+  }
+
+  nav ul li .aLink,
+  label {
     font-size: 1rem;
   }
 
