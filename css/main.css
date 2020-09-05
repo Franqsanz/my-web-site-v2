@@ -1,10 +1,12 @@
 :root {
   --gold: #ffc700;
   --dark: #111111;
+  --select-background: #ffc700;
+  --select-color-fonts: #2a2a2a;
   --color-fonts: #2a2a2a;
   --background-body: whitesmoke;
   --footer-background: #dbdbdb;
-  --gray: #999999;
+  --shadow: #999999;
   --zero: 0;
   --italic: italic;
   --bold: bold;
@@ -17,6 +19,7 @@
   --background-body: #1d1d1d;
   --footer-background: #1d1d1d;
   --color-fonts: #eeeeee;
+  --shadow: #313131;
 }
 
 html,
@@ -30,8 +33,8 @@ body {
 }
 
 ::selection {
-  color: var(--gold);
-  background: var(--color-fonts);
+  color: var(--select-background);
+  background: var(--select-color-fonts);
 }
 
 header {
@@ -54,7 +57,7 @@ li {
   color: var(--color-fonts);
 }
 
-#ceckbox {
+#checkbox {
   display: none;
 }
 
@@ -132,7 +135,7 @@ label:active {
 }
 
 .welcome:hover {
-  box-shadow: 6px 6px 30px var(--gray);
+  box-shadow: 6px 6px 30px var(--shadow);
   transition: 0.2s;
 }
 
