@@ -232,7 +232,7 @@ footer {
   color: var(--color-fonts);
   font-weight: var(--bold);
   text-decoration: none;
-  margin: 5px;
+  margin: 15px;
 }
 
 .network:hover {
