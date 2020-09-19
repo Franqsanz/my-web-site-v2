@@ -1,4 +1,4 @@
-# My Web Site v2 Portfolio 📋
+# My Web Site v2 Portfolio
 
 ![hello](./img/hello.png)
 
