@@ -227,6 +227,10 @@ footer {
   background: var(--footer-background);
 }
 
+address {
+  font-style: normal;
+}
+
 .network {
   font-size: 1.1rem;
   color: var(--color-fonts);
@@ -237,6 +241,7 @@ footer {
 
 .network:hover {
   border: none;
+  color: var(--gold);
 }
 
 @media only screen and (max-width: 1024px) {
