@@ -3,9 +3,10 @@
   --dark: #111111;
   --select-background: #ffc700;
   --select-color-fonts: #2a2a2a;
-  --color-fonts: #2a2a2a;
-  --background-body: whitesmoke;
-  --footer-background: #dbdbdb;
+  --color-fonts-light: #eeeeee;
+  --color-fonts-dark: #2a2a2a;
+  --background-body-light: whitesmoke;
+  --footer-background-light: #dbdbdb;
   --shadow: #999999;
   --zero: 0;
   --italic: italic;
@@ -13,23 +14,46 @@
   --center: center;
   --apple: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --background-body-dark: #1d1d1d;
 }
 
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --background-body: #1d1d1d;
   --footer-background: #1d1d1d;
   --color-fonts: #eeeeee;
   --shadow: #313131;
-}
+} */
 
 html,
 body {
   margin: var(--zero);
   font-family: var(--apple);
-  background: var(--background-body);
   scroll-behavior: smooth;
-  color: var(--dark-gray);
   transition: 0.3s;
+}
+
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background: var(--background-body-light);
+    color: var(--color-fonts-dark);
+  }
+  footer {
+    background: var(--footer-background-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: var(--background-body-dark);
+    color: var(--color-fonts-light);
+  }
+
+  .welcome {
+    color: var(--dark);
+  }
 }
 
 ::selection {
@@ -224,7 +248,7 @@ footer {
   margin-top: 50px;
   padding: 1.1rem;
   font-size: 1.3rem;
-  background: var(--footer-background);
+  /* background: var(--footer-background); */
 }
 
 address {
