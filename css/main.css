@@ -39,6 +39,7 @@ body {
     background: var(--background-body-light);
     color: var(--color-fonts-dark);
   }
+
   footer {
     background: var(--footer-background-light);
   }
@@ -69,35 +70,18 @@ header {
   border-bottom: 1px solid var(--gold);
 }
 
-ul {
-  display: flex;
-}
-
-li {
-  list-style: none;
-  margin: 0 20px 0 0;
-  align-self: center;
-  font-weight: var(--bold);
-  color: var(--color-fonts);
-}
-
-#checkbox {
-  display: none;
-}
-
 .aLink {
   color: var(--color-fonts);
   text-decoration: none;
-  font-size: 1.4rem;
+  font-weight: var(--bold);
+  border-bottom: 2px solid var(--gold);
 }
 
 .aLink:hover {
   color: var(--gold);
-  border-bottom: 2px solid var(--gold);
 }
 
-.aSources,
-label {
+.aSources {
   color: var(--color-fonts);
   margin: 7px;
   text-decoration: none;
@@ -110,19 +94,6 @@ label {
 
 .aSources:hover {
   box-shadow: inset 3px 3px 0 var(--gold);
-}
-
-label {
-  box-shadow: 2px 2px 0 var(--gold);
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-
-label:active {
-  box-shadow: inset 2px 2px 0 var(--gold);
 }
 
 .logo {
@@ -278,12 +249,7 @@ address {
 
 @media only screen and (max-width: 768px) {
   header {
-    padding: 0.8rem 0 2.8rem 0;
     flex-direction: column;
-  }
-
-  ul {
-    justify-content: space-evenly;
   }
 
   .contentWelcome {
@@ -310,19 +276,6 @@ address {
 }
 
 @media only screen and (max-width: 425px) {
-  ul {
-    padding-inline-start: 0;
-  }
-
-  li {
-    margin: 5px;
-  }
-
-  nav ul li .aLink,
-  label {
-    font-size: 1rem;
-  }
-
   .logo {
     padding: 0;
     font-size: 2.19rem;

@@ -7,15 +7,15 @@ window.addEventListener('load', () => {
   `);
 
   // Dark Mode
-  const checkbox = document.querySelector('input[type="checkbox"]')
+  // const checkbox = document.querySelector('input[type="checkbox"]')
 
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  }
+  // function switchTheme(e) {
+  //   if (e.target.checked) {
+  //     document.documentElement.setAttribute('data-theme', 'dark');
+  //   } else {
+  //     document.documentElement.setAttribute('data-theme', 'light');
+  //   }
+  // }
 
-  checkbox.addEventListener('change', switchTheme, false);
+  // checkbox.addEventListener('change', switchTheme, false);
 });
