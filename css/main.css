@@ -18,13 +18,6 @@
   --background-body-dark: #1d1d1d;
 }
 
-/* [data-theme='dark'] {
-  --background-body: #1d1d1d;
-  --footer-background: #1d1d1d;
-  --color-fonts: #eeeeee;
-  --shadow: #313131;
-} */
-
 html,
 body {
   margin: var(--zero);
@@ -65,8 +58,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
-  height: 60px;
+  padding: 0.3rem 0 0.4rem 0;
   border-bottom: 1px solid var(--gold);
 }
 
@@ -219,7 +211,7 @@ footer {
   margin-top: 50px;
   padding: 1.1rem;
   font-size: 1.3rem;
-  /* background: var(--footer-background); */
+  text-align: var(--center);
 }
 
 address {
@@ -278,7 +270,6 @@ address {
 @media only screen and (max-width: 425px) {
   .logo {
     padding: 0;
-    font-size: 2.19rem;
   }
 
   main {
@@ -310,6 +301,5 @@ address {
 
   footer {
     font-size: 1rem;
-    text-align: center;
   }
 }
