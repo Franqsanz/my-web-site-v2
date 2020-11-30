@@ -58,7 +58,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0.7rem 0 0.5rem 0;
+  padding: 0.8rem 0 0.5rem 0;
   border-bottom: 1px solid var(--gold);
 }
 
@@ -134,7 +134,8 @@ main {
 }
 
 .proyects,
-.me {
+.me,
+.skills {
   width: 60%;
   padding: 1rem;
 }
@@ -145,7 +146,6 @@ h1 {
   text-decoration: underline var(--gold);
   font-size: 1.9rem;
   margin-top: 4rem;
-  scroll-margin-top: 3rem;
 }
 
 h2 {
@@ -207,11 +207,24 @@ img {
   box-shadow: 6px 6px 0 var(--gold);
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
 footer {
+  display: flex;
   margin-top: 50px;
   padding: 1.1rem;
   font-size: 1.3rem;
-  text-align: var(--center);
+  justify-content: var(--center);
+  flex-wrap: wrap;
 }
 
 address {
@@ -223,7 +236,7 @@ address {
   color: var(--color-fonts);
   font-weight: var(--bold);
   text-decoration: none;
-  margin: 15px;
+  margin: 8px;
 }
 
 .network:hover {
@@ -254,7 +267,8 @@ address {
   }
 
   .proyects,
-  .me {
+  .me,
+  .skills {
     width: 90%;
   }
 
