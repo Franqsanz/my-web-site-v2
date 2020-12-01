@@ -185,7 +185,9 @@ p {
   display: grid;
   width: 70%;
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-areas: 'photo meInfo';
+  grid-template-areas:
+    "photo meInfo"
+  ;
   justify-items: var(--center);
   grid-gap: 20px;
   padding: 0;
@@ -210,12 +212,13 @@ img {
 ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: var(--center);
   padding-inline-start: 0;
 }
 
 li {
   list-style: none;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 footer {
@@ -291,7 +294,7 @@ address {
   }
 
   .contentWelcome {
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 2.5rem 0 2.5rem 0;
   }
 
