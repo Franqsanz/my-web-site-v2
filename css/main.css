@@ -7,6 +7,7 @@
   --color-fonts-dark: #2a2a2a;
   --background-body-light: whitesmoke;
   --footer-background-light: #dbdbdb;
+  --footer-background-dark: #2a2a2a;
   --shadow: #999999;
   --zero: 0;
   --italic: italic;
@@ -22,8 +23,6 @@ html,
 body {
   margin: var(--zero);
   font-family: var(--apple);
-  scroll-behavior: smooth;
-  transition: 0.3s;
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,6 +46,10 @@ body {
 
   .welcome {
     color: var(--dark);
+  }
+
+  footer {
+    background: var(--footer-background-dark);
   }
 }
 
