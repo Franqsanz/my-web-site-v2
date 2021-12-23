@@ -131,8 +131,6 @@ p {
 
 .meInfo {
   grid-area: meInfo;
-  border: 1px solid var(--gold);
-  box-shadow: 6px 6px 0 var(--gold);
 }
 
 img {
@@ -205,6 +203,7 @@ address {
 
   .welcomeMsj {
     width: 80%;
+    transform: rotate(0);
     text-align: left;
   }
 
