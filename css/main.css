@@ -174,8 +174,7 @@ address {
 
 @media only screen and (max-width: 768px) {
   .contentWelcome {
-    margin-top: 100px;
-    padding: 0 0.3rem 0.3rem 0;
+    padding: 6rem 0.3rem 0.3rem 0;
   }
 
   .welcomeMsj {
@@ -197,8 +196,7 @@ address {
   }
 
   .contentWelcome {
-    margin-top: 30px;
-    padding: 2.5rem 0 2.5rem 0;
+    padding-bottom: 5rem;
   }
 
   .welcomeMsj {
@@ -208,7 +206,7 @@ address {
   }
 
   .welcome {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     line-height: 1.19;
   }
 
