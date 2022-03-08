@@ -8,21 +8,23 @@ window.addEventListener('load', () => {
     font-size: 1.6rem;
   `);
 
+  let load = '<div class="load"></div>'
+  article.innerHTML = load;
+
   fetch("https://dev.to/api/articles?username=franqsanz")
     .then((res) => res.json())
     .then((data) => {
-    
-    let html = "";
-  
-    data.forEach(({ title, url, readable_publish_date }) => {
-      html += `
-        <a href="${url}" class="aLink">
-          <h2>${title}</h2>
-        </a>
-        <small>${readable_publish_date}</small>
-      `;
-
-      article.innerHTML = html;
+          
+      let html = "";
+      
+      data.forEach(({ title, url, readable_publish_date }) => {
+        html += `
+          <a href="${url}" class="aLink">
+            <h2>${title}</h2>
+          </a>
+          <small>${readable_publish_date}</small>
+        `;
+        article.innerHTML = html;
+      });
     });
-  });
 });
