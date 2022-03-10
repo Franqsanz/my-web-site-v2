@@ -31,6 +31,10 @@ body {
     color: var(--color-fonts-dark);
   }
 
+  .welcome {
+    box-shadow: 6px 6px 30px var(--shadow);
+  }
+
   footer {
     background: var(--footer-background-light);
   }
@@ -45,6 +49,7 @@ body {
 
   .welcome {
     color: var(--dark);
+    box-shadow: 6px 6px 30px var(--dark);
   }
 
   footer {
@@ -101,15 +106,10 @@ body {
 }
 
 .welcome {
-  font-size: 3.5rem;
+  font-size: clamp(4.4rem, 10vw, 3.5rem);
   font-weight: var(--bold);
   font-style: var(--italic);
   background: var(--gold);
-}
-
-.welcome:hover {
-  box-shadow: 6px 6px 30px var(--shadow);
-  transition: 0.2s;
 }
 
 main {
@@ -157,12 +157,10 @@ small {
 .me {
   display: grid;
   width: 70%;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-areas: "photo meInfo";
   justify-items: var(--center);
   grid-gap: 20px;
   padding: 0;
-  /* align-items: center; */
 }
 
 .photo {
@@ -259,7 +257,6 @@ address {
   }
 
   .welcome {
-    font-size: 4.2rem;
     line-height: 1.19;
   }
 

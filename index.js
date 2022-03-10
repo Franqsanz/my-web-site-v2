@@ -8,8 +8,7 @@ window.addEventListener('load', () => {
     font-size: 1.6rem;
   `);
 
-  let load = '<div class="load"></div>'
-  article.innerHTML = load;
+  article.innerHTML = '<div class="load"></div>';
 
   fetch("https://dev.to/api/articles?username=franqsanz")
     .then((res) => res.json())
@@ -26,5 +25,8 @@ window.addEventListener('load', () => {
         `;
         article.innerHTML = html;
       });
+    })
+    .catch(() => {
+      article.innerHTML = '<p>No se logra conectar con la API del sitio DEV.to.</p>';
     });
 });
