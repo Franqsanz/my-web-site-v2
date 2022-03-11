@@ -93,7 +93,7 @@ body {
   color: var(--gold);
 }
 
-.contentWelcome {
+header {
   padding: 10rem 0 6rem 0;
 }
 
@@ -147,7 +147,7 @@ article {
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 5vw, 1.3rem);
 }
 
 small {
@@ -180,7 +180,7 @@ footer {
   display: flex;
   margin-top: 50px;
   padding: 1.1rem;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.3rem);
   justify-content: var(--center);
   flex-wrap: wrap;
 }
@@ -190,7 +190,7 @@ address {
 }
 
 .network {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 4vw, 1.1rem);
   color: var(--color-fonts);
   font-weight: var(--bold);
   text-decoration: none;
@@ -211,7 +211,7 @@ address {
 }
 
 @media only screen and (max-width: 768px) {
-  .contentWelcome {
+  header {
     padding: 6rem 0.3rem 0.3rem 0;
   }
 
@@ -221,10 +221,6 @@ address {
 
   .me {
     width: 90%;
-  }
-
-  .network {
-    font-size: 1rem;
   }
 }
 
@@ -238,15 +234,11 @@ address {
     padding: 0;
   }
 
-  h2 {
-    font-size: 1.2rem;
-  }
-
   main {
     padding: 0;
   }
 
-  .contentWelcome {
+  header {
     padding-bottom: 5rem;
   }
 
@@ -258,9 +250,5 @@ address {
 
   .welcome {
     line-height: 1.19;
-  }
-
-  footer {
-    font-size: 1rem;
   }
 }
