@@ -142,8 +142,13 @@ h1 {
 
 article {
   width: 50%;
+  height: 400px;
+  overflow: hidden;
   padding: 1.5em;
-  margin: 0 0 10ch 0;
+}
+
+article.moreLinks {
+  height: auto;
 }
 
 h2 {
@@ -152,6 +157,23 @@ h2 {
 
 small {
   font-size: 1rem;
+}
+
+.contentBtn {
+  margin: 5ch 0 10ch 0;
+}
+
+button {
+  width: 200px;
+  padding: 1em;
+  font-size: 1.125rem;
+  background: none;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--gold);
 }
 
 .me {

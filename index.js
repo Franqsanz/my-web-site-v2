@@ -1,4 +1,5 @@
 const article = document.querySelector("article");
+const btn = document.querySelector("button");
 
 window.addEventListener('load', () => {
   console.log(`
@@ -29,4 +30,14 @@ window.addEventListener('load', () => {
     .catch(() => {
       article.innerHTML = '<p>No se logra conectar con la API del sitio DEV.to.</p>';
     });
+  
+  // event
+  btn.addEventListener('click', moreLinks);
 });
+
+function moreLinks() {
+  article.classList.toggle('moreLinks');
+
+  if (btn.innerText === 'Más Artículos') return btn.innerText = 'Menos Artículos'
+    btn.innerText = 'Más Artículos'
+}
