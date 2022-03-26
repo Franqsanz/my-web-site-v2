@@ -161,7 +161,7 @@ article {
 article::before {
   display: block;
   width: 100%;
-  height: 30em;
+  height: 15em;
   content: "";
   position: absolute;
   top: 21em;
