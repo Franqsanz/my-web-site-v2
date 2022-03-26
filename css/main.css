@@ -13,8 +13,8 @@
   --italic: italic;
   --bold: bold;
   --center: center;
-  --apple: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --apple: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --background-body-dark: #1d1d1d;
 }
 
@@ -36,6 +36,10 @@ body {
     box-shadow: 6px 6px 30px var(--shadow);
   }
 
+  article::before {
+    background: linear-gradient(transparent, var(--background-body-light) 25%);
+  }
+
   footer {
     background: var(--footer-background-light);
   }
@@ -52,6 +56,10 @@ body {
   span {
     color: var(--dark);
     box-shadow: 6px 6px 30px var(--dark);
+  }
+
+  article::before {
+    background: linear-gradient(transparent, var(--background-body-dark) 25%);
   }
 
   footer {
@@ -147,10 +155,26 @@ article {
   height: 400px;
   overflow: hidden;
   padding: 1.5em;
+  position: relative;
+}
+
+article::before {
+  display: block;
+  width: 100%;
+  height: 30em;
+  content: "";
+  position: absolute;
+  top: 21em;
+  left: 0;
 }
 
 article.moreLinks {
   height: auto;
+}
+
+article.moreLinks::before {
+  display: none;
+  top: 0;
 }
 
 h2 {
@@ -182,7 +206,7 @@ button:hover {
 .me {
   display: grid;
   width: 70%;
-  grid-template-areas: "photo meInfo";
+  grid-template-areas: 'photo meInfo';
   justify-items: var(--center);
   grid-gap: 20px;
   padding: 0;
@@ -230,8 +254,8 @@ address {
 @media only screen and (max-width: 1024px) {
   .me {
     grid-template-areas:
-      "photo"
-      "meInfo";
+      'photo'
+      'meInfo';
   }
 }
 

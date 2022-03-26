@@ -43,9 +43,13 @@ function errCallApi() {
 }
 
 // event
-function moreLinks() {
+function moreLinks(ev) {
   article.classList.toggle('moreLinks');
 
   if (btn.innerText === 'Más Artículos') return btn.innerText = 'Menos Artículos'
     btn.innerText = 'Más Artículos'
+
+  if (ev.target.tagName === 'BUTTON') {
+    ev.target.classList.toggle('moreLinks');
+  }
 }
