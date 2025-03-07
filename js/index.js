@@ -20,7 +20,13 @@ window.addEventListener('load', () => {
 function callApi() {
   article.innerHTML = '<div class="load"></div>';
 
-  fetch('https://dev.to/api/articles?username=franqsanz')
+  fetch('https://dev.to/api/articles?username=franqsanz', {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
     .then((res) => res.json())
     .then(renderHTML)
     .catch(errCallApi);
